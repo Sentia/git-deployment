@@ -70,9 +70,9 @@ Please make sure you have pulled and pushed all code before deploying:
               `git fetch`
 
               if respond_to?("tag_#{stage}")
-                send "tag_#{stage}" 
+                send "tag_#{stage}"
 
-                system "git push --tags origin #{local_branch}"
+                system "git push origin #{branch}"
                 if $? != 0
                   abort "git push failed"
                 end
