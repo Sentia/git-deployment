@@ -22,11 +22,11 @@ module Capistrano
           end
 
           def next_staging_tag
-            hwhen   = Date.today.to_s
-            who = `whoami`.chomp.to_url
+            hwhen = Date.today.strftime('%Y%m%d')
+            who   = `whoami`.chomp.to_url
 
             last_staging_tag = last_tag_matching("staging-#{hwhen}-*")
-            new_tag_serial = if last_staging_tag && last_staging_tag =~ /staging-[0-9]{4}-[0-9]{2}-[0-9]{2}\-([0-9]*)/
+            new_tag_serial = if last_staging_tag && last_staging_tag =~ /staging-[0-9]{8}\-([0-9]*)/
                                $1.to_i + 1
                              else
                                1
