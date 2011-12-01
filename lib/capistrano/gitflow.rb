@@ -31,6 +31,7 @@ module Capistrano
                              else
                                1
                              end
+            new_tag_serial = new_tag_serial.to_s.rjust(2, '0') # Pad with a leading zero
 
             "#{stage}-#{hwhen}-#{new_tag_serial}-#{who}"
           end
