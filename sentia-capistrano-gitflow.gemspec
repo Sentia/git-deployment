@@ -21,9 +21,10 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "lib/capistrano/gitflow.rb",
-    "lib/capistrano/gitflow/natcmp.rb",
-    "recipes/gitflow_recipes.rb"
+    "lib/sentia/capistrano/gitflow.rb",
+    "lib/sentia/capistrano/gitflow/natcmp.rb",
+    "recipes/gitflow_recipes.rb",
+    "sentia-capistrano-gitflow.gemspec"
   ]
   s.homepage = "https://github.com/Sentia/git-deployment"
   s.require_paths = ["lib"]
